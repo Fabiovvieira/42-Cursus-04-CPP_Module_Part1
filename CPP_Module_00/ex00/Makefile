@@ -19,7 +19,7 @@ $(NAME): $(OBJ)
 		@$(CPP) $(CFLAGS) $(EFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-		@$(RM) $(OBJ)
+		@$(RM) $(NAME)
 
 fclean: clean
 		@$(RM) $(NAME)
