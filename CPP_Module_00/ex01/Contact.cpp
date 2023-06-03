@@ -3,20 +3,52 @@
 #include "Contact.hpp"
 
 Contact::Contact(void){
-	std::cout << "Contact Constructor called" << std::endl;
+//	std::cout << "Contact Constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact(void){
-	std::cout << "Contact Destructor called" << std::endl;
+//	std::cout << "Contact Destructor called" << std::endl;
 	return ;
+}
+
+std::string Contact::getfname() {
+	return(this->_fname);
+}
+
+std::string Contact::getlname() {
+	return(this->_lname);
+}
+
+std::string Contact::getnickname() {
+	return(this->_nickname);
+}
+
+std::string Contact::getphone() {
+	return(this->_phone);
+}
+
+std::string Contact::getsecret() {
+	return(this->_secret);
+}
+
+void	Contact::getfullContact() {
+	std::cout << "Contact Info:" << std::endl;
+	std::cout << "First name: " << this->getfname() <<std::endl;
+	std::cout << "Last Name: " << this->getlname() << std::endl;
+	std::cout << "Nickname: " << this->getnickname() <<std::endl;
+	std::cout << "Phone number: " << this->getphone() << std::endl;
+	std::cout << "Darkest Secret: " << this->getsecret() <<std::endl;
 }
 
 std::string Contact::_getFromUser(std::string field) {
 	std::string contactField;
 
-	std::cout << field;
-	std::cin >> contactField;
+	do {
+		std::cout << field;
+		std::getline(std::cin, contactField);
+	} while(contactField.empty());
+
 	return (contactField);
 }
 
