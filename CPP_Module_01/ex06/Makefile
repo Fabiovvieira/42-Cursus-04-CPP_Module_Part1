@@ -1,10 +1,10 @@
-NAME	= sedisforlosers
+NAME	= harlFilter
 
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -f
 
-SRC		= main.cpp
+SRC		= main.cpp Harl.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 
