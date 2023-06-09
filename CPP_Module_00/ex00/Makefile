@@ -2,9 +2,9 @@
 NAME	= megaphone
 
 # Compiler and flags
-CPP		= c++
-CFLAGS	= -Wall -Wextra -Werror
-EFLAGS	= -std=c++98
+CXX		= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+
 RM		= rm -rf
 
 # Sources, objects and dir
@@ -16,12 +16,12 @@ OBJ		=	$(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@$(CPP) $(CFLAGS) $(EFLAGS) $(OBJ) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-		@$(RM) $(NAME)
+		$(RM) $(NAME)
 
 fclean: clean
-		@$(RM) $(NAME)
+		$(RM) $(NAME)
 
 re: fclean all

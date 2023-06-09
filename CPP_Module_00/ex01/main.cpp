@@ -9,9 +9,16 @@ int	main(void)
 	PhoneBook	phonebook;
 	while (1)
 	{
-
 			std::cout << "Enter one of the three commands (ADD , SEARCH or EXIT): " << std::endl;
 			std::getline(std::cin, cmd);
+			if (std::cin.eof()) {
+				std::cout << "End of input reached." << std::endl;
+				return(1);
+			}
+			else if (std::cin.fail()) {
+				std::cout << "Error reading input." << std::endl;
+				return(1);
+			}
 			if (cmd == "EXIT")
 				break;
 			else if (cmd == "ADD") {

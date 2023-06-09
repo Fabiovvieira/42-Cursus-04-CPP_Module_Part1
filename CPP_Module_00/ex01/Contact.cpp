@@ -1,6 +1,7 @@
 #include<iostream>
 #include <iomanip>
 #include "Contact.hpp"
+#include <cstdlib>
 
 Contact::Contact(void){
 //	std::cout << "Contact Constructor called" << std::endl;
@@ -47,8 +48,15 @@ std::string Contact::_getFromUser(std::string field) {
 	do {
 		std::cout << field;
 		std::getline(std::cin, contactField);
+		if (std::cin.eof()) {
+			std::cout << "End of input reached." << std::endl;
+			std::exit(1);
+		}
+		else if (std::cin.fail()) {
+			std::cout << "Error reading input." << std::endl;
+			std::exit(1);
+		}
 	} while(contactField.empty());
-
 	return (contactField);
 }
 

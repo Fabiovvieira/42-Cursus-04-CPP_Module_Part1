@@ -13,7 +13,6 @@ int	Account::_totalNbWithdrawals = 0;
 
 
 Account::Account(int initial_deposit) : _amount(initial_deposit){
-//[19920104_091532] index:0;amount:42;created
 	this->_accountIndex = this->getNbAccounts();
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
@@ -28,7 +27,6 @@ Account::Account(int initial_deposit) : _amount(initial_deposit){
 };
 
 Account::~Account(void) {
-//	[19920104_091532] index:0;amount:47;closed
 	this->_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "amount:" << this->checkAmount() << ";";
@@ -65,7 +63,6 @@ int	Account::getNbDeposits( void ){
 };
 
 void	Account::displayAccountsInfos(void) {
-//	[19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 	Account::_displayTimestamp();
 	std::cout << "accounts:" << Account::getNbAccounts() << ";";
 	std::cout << "total:" << Account::getTotalAmount() << ";";
@@ -74,7 +71,6 @@ void	Account::displayAccountsInfos(void) {
 };
 
 void	Account::displayStatus(void) const {
-//	[19920104_091532] index:0;amount:42;deposits:0;withdrawals:0
 	Account::_displayTimestamp();
 	std::cout << "index:" << Account::_accountIndex << ";";
 	std::cout << "amount:" << Account::_amount << ";";
@@ -87,7 +83,6 @@ int	Account::checkAmount(void) const {
 };
 
 void	Account::makeDeposit( int deposit ){
-//	[19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
 	Account::_totalNbDeposits++;
 	this->_nbDeposits++;
 	Account::_totalAmount += deposit;
@@ -102,7 +97,6 @@ void	Account::makeDeposit( int deposit ){
 };
 
 bool	Account::makeWithdrawal(int withdrawal) {
-//	[19920104_091532] index:1;p_amount:819;withdrawal:34;amount:785;nb_withdrawals:1
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "p_amount:" << this->checkAmount() << ";";
@@ -118,7 +112,6 @@ bool	Account::makeWithdrawal(int withdrawal) {
 	}
 	else
 	{
-//		[19920104_091532] index:0;p_amount:47;withdrawal:refused
 		std::cout << "withdrawal:refused" << std::endl;
 		return (false);
 	}

@@ -1,7 +1,7 @@
 NAME	= account
 
-CC		= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXX		= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -f
 
 HEADER	= Account.hpp
@@ -13,7 +13,7 @@ OBJ		= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(SRC) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	$(RM) $(OBJ)
