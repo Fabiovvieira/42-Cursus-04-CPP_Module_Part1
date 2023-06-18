@@ -16,14 +16,14 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-private:
+protected:
 	std::string		_name;
 	int	_hitP;
 	int	_energyP;
 	int	_attackDamage;
-	int const _HP;
-	int const _EP;
-	int const _AD;
+	int _HP;
+	int _EP;
+	int _AD;
 };
 
 #endif
