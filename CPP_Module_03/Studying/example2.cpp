@@ -13,12 +13,14 @@ public:
 	A(int i) { x = i; }
 	A() { x = 0; } // Default constructor
 	void print() { cout << x; }
+	attack();
 };
 
 class B: virtual public A
 {
 public:
 	B():A(10) {  }
+	attack();
 };
 
 class C:  virtual public A
@@ -36,5 +38,6 @@ int main()
 {
 	D d;
 	d.print();
+	d.attack();
 	return 0;
 }

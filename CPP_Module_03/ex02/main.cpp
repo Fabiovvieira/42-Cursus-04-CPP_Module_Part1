@@ -1,9 +1,9 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void){
-	ScavTrap	one("Fabio");
-	ScavTrap	two(one);
-	ScavTrap	three;
+	FragTrap	one("Fabio");
+	FragTrap	two(one);
+	FragTrap	three;
 	three = one;
 
 	std::cout << std::endl;
@@ -18,7 +18,7 @@ int	main(void){
 	one.takeDamage(10);
 	one.beRepaired(1);
 	one.beRepaired(10);
-	one.guardGate();
+	one.highFivesGuys();
 
 	std::cout << std::endl;
 
@@ -32,7 +32,7 @@ int	main(void){
 	two.takeDamage(10);
 	two.beRepaired(1);
 	two.beRepaired(10);
-	two.guardGate();
+	two.highFivesGuys();
 
 	std::cout << std::endl;
 
@@ -46,7 +46,7 @@ int	main(void){
 	three.takeDamage(10);
 	three.beRepaired(1);
 	three.beRepaired(10);
-	three.guardGate();
+	three.highFivesGuys();
 
 	std::cout << std::endl;
 }

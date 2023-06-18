@@ -9,9 +9,8 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitP(10), _energyP(10), _at
 	std::cout << "Parametric ClapTrap constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const &src) : _HP(src._HP), _EP(src._EP), _AD(src._AD){
+ClapTrap::ClapTrap(ClapTrap const &src) : _name(src._name), _hitP(src._hitP), _energyP(src._energyP), _attackDamage(src._attackDamage), _HP(src._HP), _EP(src._EP), _AD(src._AD){
 	std::cout << "Copy ClapTrap constructor called" << std::endl;
-	*this = src;
 } //copy constructor
 
 ClapTrap::~ClapTrap(){
@@ -52,14 +51,12 @@ void ClapTrap::takeDamage(unsigned int amount){
 }
 
 void ClapTrap::beRepaired(unsigned int amount){
-	if (this->_energyP > 0 && this->_hitP > 0 && this->_hitP < this->_HP)
+	if (this->_energyP > 0 && this->_hitP > 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " repaired itself and got " << amount << " hit points back." << std::endl;
 		this->_energyP--;
 		this->_hitP += amount;
-		if (this->_hitP > this->_HP)
-			this->_hitP = _HP;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " don't have enough Energy points or Hit points to repair itself. Or ClapTrap has HP full already." << std::endl;
+		std::cout << "ClapTrap " << this->_name << " don't have enough Energy points or Hit points to repair itself." << std::endl;
 }
