@@ -21,3 +21,7 @@ Dog::~Dog(){
 //	std::cout << "Dog copy assignment operator called" << std::endl;
 //	return *this;
 //}//Copy assignment operator
+
+void Dog::makeSound() const {
+    std::cout << "Au au." << std::endl;
+}

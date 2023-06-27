@@ -13,6 +13,7 @@ public:
 	~Cat();//destructor
 //	Cat(Cat const &src); //copy constructor
 //	Cat	&operator=(Cat const &rhs); //copy assignment operator
+    void makeSound(void) const;
 };
 
 

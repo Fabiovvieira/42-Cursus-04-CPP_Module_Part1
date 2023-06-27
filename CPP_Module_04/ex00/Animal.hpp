@@ -11,10 +11,10 @@
 class Animal {
 public:
 	Animal(); //Default constructor
-	~Animal();//destructor
+	virtual ~Animal();//destructor
 	Animal(Animal const &src); //copy constructor
 	Animal	&operator=(Animal const &rhs); //copy assignment operator
-	void makeSound(void) const;
+	virtual void makeSound(void) const;
 	std::string getType(void) const;
 
 protected:

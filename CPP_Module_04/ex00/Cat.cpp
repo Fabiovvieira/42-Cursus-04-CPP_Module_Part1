@@ -21,3 +21,7 @@ Cat::~Cat(){
 //	std::cout << "Cat copy assignment operator called" << std::endl;
 //	return *this;
 //}//Copy assignment operator
+
+void Cat::makeSound() const {
+    std::cout << "Miau." << std::endl;
+}

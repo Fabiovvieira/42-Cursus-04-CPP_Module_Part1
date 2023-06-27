@@ -13,6 +13,7 @@ public:
 	~Dog();//destructor
 //	Dog(Dog const &src); //copy constructor
 //	Dog	&operator=(Dog const &rhs); //copy assignment operator
+    void makeSound(void) const;
 };
 
 

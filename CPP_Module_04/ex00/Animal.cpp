@@ -35,10 +35,5 @@ std::string Animal::getType(void) const{
 }
 
 void Animal::makeSound() const {
-	if(getType() == "Animal")
 		std::cout << "I am an Animal and I don't make sound." << std::endl;
-	else if(getType() == "Dog")
-		std::cout << "Au au." << std::endl;
-	else if(getType() == "Cat")
-		std::cout << "Miau." << std::endl;
 }
