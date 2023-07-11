@@ -5,17 +5,20 @@
 #include "Dog.hpp"
 
 
-Dog::Dog() {
+Dog::Dog(){
 	std::cout << "Default Dog constructor called" << std::endl;
 	this->type = "Dog";
+	this->_brain = new Brain();
 } //Default Constructor
 
 //Dog::Dog(Dog const &src) {
 //	std::cout << "Copy Dog constructor called" << std::endl;
 //} //copy constructor
+//I GOT LOOK AT THE COPY CONSTRUCTOR
 
 Dog::~Dog(){
 	std::cout << "Dog destructor called" << std::endl;
+	delete (this->_brain);
 } //destructor
 
 //Dog	&Dog::operator=(Dog const &rhs){
